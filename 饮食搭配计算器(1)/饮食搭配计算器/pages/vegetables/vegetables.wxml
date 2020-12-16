@@ -1,0 +1,62 @@
+
+<view class='main'><image class="bac" src="../logs/微信图片_20201211141150.jpg"></image>
+
+<view class='cart_Title' wx:if='{{hasList}}'> 
+  <view class='stable' wx:for='{{carts}}' wx:key='{{index}}'>
+  <!-- 全选反选按钮 -->
+    <icon wx:if='{{item.selected}}' type='success' color='red' bindtap='handleselectList' data-index='{{index}}'></icon>
+    <icon wx:else type='circle' bindtap='handleselectList' data-index='{{index}}'></icon>
+    <!--收藏-->
+    <view wx:if="{{item.selectedSucceed==false}}">
+   <view>
+      <image class='cnn'src="{{iconAddBookrackSucceed}}"></image>
+      <view class="cnn">{{bookAddBookrackSucceed}}</view>
+   </view>
+</view>
+<view wx:else>
+   <view bindtap="chooseAddBookrack">
+      <image class='cnn' src="{{iconAddBookrack}}"></image>
+      <view>{{bookAddBookrack}}</view>
+   </view>
+</view>
+    <!-- 数据名称 -->
+    
+    <text class='tit'>{{item.title}}</text>
+    <text>\r\n</text>
+    
+    <!-- 数据价格 -->
+    <text class='cart-price options'>能量{{item.price}}(kJ)/100g </text> 
+    <text>\r\n</text>
+    <text class='cart-price options'>脂肪{{item.zhifang}}g/100g</text>
+    <text>\r\n</text>
+    <text class='cart-price options'>蛋白{{item.danbai}}g/100g</text>
+   
+    <!-- 数量的加减操作 -->
+    <view class='count'>
+      <text class='redus' data-index='{{index}}' bindtap='handleredus'>-</text>
+      <text class='cart-count'>{{item.num}}g</text>
+      <text class='add' data-index='{{index}}' bindtap='handleadd'>+</text>
+    </view>
+    
+  </view>
+</view>
+<!-- 当没有数据时显示的内容 -->
+<view wx:else class='delAfter'>{{deleteData}}</view>
+</view>
+
+<!-- 底部 -->
+<view class='cart-bottom'>
+ <text class='zji'>总计</text>
+ <text>\r\n</text>
+  <text class='total'>
+    能量：<text>{{totalPrice}}</text>kJ
+  </text>
+  <text class='total'>
+   脂肪：<text>{{totalCount}}</text>g
+  </text>
+  <text class='total'>
+    蛋白：<text>{{totaldanbai}}</text>g
+  </text>
+  
+
+</view>

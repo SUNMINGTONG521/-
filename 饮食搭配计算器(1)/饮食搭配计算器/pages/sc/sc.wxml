@@ -1,0 +1,25 @@
+
+<view class='main'><image class="bac" src="../logs/微信图片_20201211141150.jpg"></image>
+
+  <view class='cart_Title' wx:if='{{hasList}}'> 
+    <view class='stable' wx:for='{{carts}}' wx:key='{{index}}'>
+   
+      <!-- 数据名称 -->
+      
+      <text class='tit'>{{item.title}}</text>
+      <text>\r\n</text>
+      
+      <!-- 数据价格 -->
+      <text class='cart-price options'>能量{{item.price}}(kJ)/100g </text> 
+      <text>\r\n</text>
+      <text class='cart-price options'>脂肪{{item.zhifang}}g/100g</text>
+      <text>\r\n</text>
+      <text class='cart-price options'>蛋白{{item.danbai}}g/100g</text>
+     
+      
+    </view>
+  </view>
+  <!-- 当没有数据时显示的内容 -->
+  <view wx:else class='delAfter'>{{deleteData}}</view>
+</view>
+

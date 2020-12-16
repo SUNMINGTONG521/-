@@ -1,0 +1,10 @@
+<view>
+<image class="bac" src="../logs/微信图片_20201211131626.jpg"></image></view>
+  <image src="/pages/logs/豆.png" class="img-style" animation="{{animWrite}}" bindtap="dou"></image>
+  <image src="/pages/logs/谷物.SVG.png" class="img-style" animation="{{animCollect}}" bindtap="gu"></image>
+  <image src="/pages/logs/肉类.png" class="img-style" animation="{{animTranspond}}" bindtap="rou"></image>
+  <image src="/pages/logs/海鲜 (1).png" class="img-style" animation="{{animInput}}" bindtap="seafood"></image>
+  <image src="/pages/logs/蔬菜.png" class="img-style" animation="{{animCloud}}" bindtap="vegetables"></image>
+  <image src="/pages/logs/吃饭.png" class="img-switch-style" animation="{{animPlus}}" bindtap="plus"></image>
+
+

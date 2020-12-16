@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/main/main",
+    "pages/index/index",
+    "pages/my/my",
+    "pages/logs/logs",
+    "pages/rou/rou"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fbc7d4",
+    "navigationBarTitleText": "饮食搭配计算器",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#353535",
+    "selectedColor": "#09bb07",
+    "borderStyle": "white",
+    "backgroundColor": "#FFF0F5",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/main/main",
+        "iconPath": "/pages/logs/主页.png",
+        "selectedIconPath": "/pages/logs/主页.png",
+        "text": "主页"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "/pages/logs/我的.png",
+        "selectedIconPath": "/pages/logs/我的.png",
+        "text": "我的"
+      }
+    ]
+  }
+}
